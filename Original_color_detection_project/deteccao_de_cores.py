@@ -2,7 +2,7 @@ import cv2 as cv
 import pandas as pd
 
 #Criando analisador de argumentos para obter o caminho da imagem da linha de comando
-img_path = r'colorpic.jpg'
+img_path = r'sesc_arsenal.jpg'
 
 #Lendo a imagem com 'opencv'
 img = cv.imread(img_path)
@@ -37,12 +37,12 @@ def draw_function(event, x,y,flags,param):
         g = int(g)
         r = int(r)
        
-cv.namedWindow('image')
-cv.setMouseCallback('image',draw_function)
+cv.namedWindow('DC - Detector de Cores')
+cv.setMouseCallback('DC - Detector de Cores',draw_function)
 
 while(1):
 
-    cv.imshow("image",img)
+    cv.imshow("DC - Detector de Cores",img)
     if (clicked):
    
         #cv.rectangle(image, startpoint, endpoint, color, thickness)-1 - Preenche todo o retângulo 
